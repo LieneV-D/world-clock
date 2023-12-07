@@ -13,6 +13,7 @@ body {
   max-width: 950px;
   background-color: white;
   opacity: 85%;
+  box-shadow: 2px -6px 95px rgba(209, 157, 2, 0.2);
 }
 a {
   text-decoration: none;
@@ -78,7 +79,7 @@ h2 {
 .city-1 {
   background-image: url("riga.jpeg");
   background-position: -1px;
-  color: rgb(209, 157, 2);
+  color: rgb(244, 226, 176);
   width: 300px;
   height: 300px;
   text-align: center;
@@ -104,7 +105,7 @@ h2 {
   border-color: rgb(209, 157, 2);
   border-radius: 50%;
   box-shadow: 0px 0px 20px 16px rgba(4, 119, 199, 0.2);
-  color: rgb(209, 157, 2);
+  color: rgb(244, 226, 176);
 }
 
 .city-3 {
@@ -119,11 +120,12 @@ h2 {
   border-color: rgb(209, 157, 2);
   border-radius: 50%;
   box-shadow: 0px 0px 20px 16px rgba(4, 119, 199, 0.2);
-  color: rgb(209, 157, 2);
+  color: rgb(244, 226, 176);
 }
 .time {
   margin-bottom: 20px;
   font-size: 50px;
+  font-weight: bold;
 }
 footer > a {
   color: rgb(7, 73, 117);
