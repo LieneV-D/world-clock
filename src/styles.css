@@ -1,0 +1,135 @@
+body {
+  background-image: url("blue.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.clock-container {
+  padding: 30px;
+  display: block;
+  margin: 0 auto;
+
+  text-align: center;
+  max-width: 950px;
+  background-color: white;
+  opacity: 85%;
+}
+a {
+  text-decoration: none;
+  color: rgb(209, 157, 2);
+}
+h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 80px;
+  font-weight: 700;
+  background-color: rgb(161, 228, 237);
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  opacity: 100%;
+}
+
+select {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(161, 228, 237);
+  color: rgb(209, 157, 2);
+  border: none;
+  font-size: 25px;
+  width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/*.flex-container > div {
+  width: 300px;
+  height: 300px;
+  background-color: rgb(18, 102, 159);
+  background-position: 10% 60%;
+  color: rgb(249, 239, 207);
+  margin: 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 30px;
+  border-color: rgb(201, 196, 179);
+  border: solid;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 16px rgba(4, 119, 199, 0.2);
+}
+*/
+h2 {
+  padding-top: 20px;
+}
+
+.flex-container > div:hover {
+  cursor: pointer;
+  opacity: 80%;
+  transition: all 120ms ease-in-out;
+}
+
+.city-1 {
+  background-image: url("riga.jpeg");
+  background-position: -1px;
+  color: rgb(209, 157, 2);
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 30px;
+  border: solid;
+  border-color: rgb(209, 157, 2);
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 16px rgba(4, 119, 199, 0.2);
+}
+.city-2 {
+  background-image: url("portland2.jpg");
+  background-position: center;
+  background-position: -2px -85px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 30px;
+  border: solid;
+  border-color: rgb(209, 157, 2);
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 16px rgba(4, 119, 199, 0.2);
+  color: rgb(209, 157, 2);
+}
+
+.city-3 {
+  background-image: url("tokyo.jpg");
+  background-position: -2px -55px;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 30px;
+  border: solid;
+  border-color: rgb(209, 157, 2);
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 16px rgba(4, 119, 199, 0.2);
+  color: rgb(209, 157, 2);
+}
+.time {
+  margin-bottom: 20px;
+  font-size: 50px;
+}
+footer > a {
+  color: rgb(7, 73, 117);
+}
+
+footer {
+  margin: 30px 10px 10px 20px;
+  color: rgb(209, 157, 2);
+}
