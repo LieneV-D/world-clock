@@ -45,11 +45,16 @@ setInterval(updateTokyoTime, 1000);
 //City selection menu, display time when city is selected
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+
+  let citySelectedName = "";
   if (cityTimeZone === "current") {
     cityTimeZone = moment.tz.guess();
+    citySelectedName = cityTimeZone.split("/")[1];
+  } else {
+    let cityName = document.getElementById("city-select");
+    citySelectedName = cityName.options[cityName.selectedIndex].text;
   }
-  let cityName = document.getElementById("city-select");
-  let citySelectedName = cityName.options[cityName.selectedIndex].text;
+
   let cityTime = moment().tz(cityTimeZone).format("HH:mm:ss");
   let cityDate = moment().tz(cityTimeZone).format("MMM Do YYYY");
 
