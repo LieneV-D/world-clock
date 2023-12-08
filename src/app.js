@@ -50,7 +50,6 @@ function updateCity(event) {
   }
   let cityName = document.getElementById("city-select");
   let citySelectedName = cityName.options[cityName.selectedIndex].text;
-  //cityTimeZone.split("/")[1] + "!!!";
   let cityTime = moment().tz(cityTimeZone).format("HH:mm:ss");
   let cityDate = moment().tz(cityTimeZone).format("MMM Do YYYY");
 
@@ -65,7 +64,7 @@ function updateCity(event) {
               <a href="/">Go back to all cities</a>`;
   setInterval(updateEachSecond, 1000);
 }
-// Update select time each second
+// Update 'select' time each second
 function updateEachSecond() {
   let citySelectElement = document.querySelector("#city-select");
   let timeZoneValue = citySelectElement.value;
