@@ -45,6 +45,9 @@ setInterval(updateTokyoTime, 1000);
 //City selection menu, display time when city is selected
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
   let cityName = cityTimeZone.split("/")[1];
   let cityTime = moment().tz(cityTimeZone).format("HH:mm:ss");
   let cityDate = moment().tz(cityTimeZone).format("MMM Do YYYY");
@@ -58,8 +61,6 @@ function updateCity(event) {
                 <div class="date">${cityDate}</div>
               </div> <br />
               <a href="/">Go back to all cities</a>`;
-
-  setInterval(updateCity, 1000);
 }
 
 let citySelectElement = document.querySelector("#city-select");
