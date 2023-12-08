@@ -1,7 +1,8 @@
 body {
-  background-image: url("blue.jpg");
+  background-image: url("gold.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: -2px -85px;
 }
 
 .clock-container {
@@ -13,17 +14,22 @@ body {
   max-width: 950px;
   background-color: white;
   opacity: 85%;
-  box-shadow: 2px -6px 95px rgba(209, 157, 2, 0.2);
 }
 a {
   text-decoration: none;
   color: rgb(209, 157, 2);
 }
+h1 a {
+  -webkit-text-stroke: 2px black;
+  text-shadow: 5px 5px 10px rgba(209, 157, 2, 0.4);
+  color: #d19d02;
+}
 h1 {
   font-family: "Dancing Script", cursive;
   font-size: 80px;
   font-weight: 700;
-  background-color: rgb(161, 228, 237);
+
+  /* background-color: rgb(161, 228, 237); */
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -33,7 +39,7 @@ h1 {
 select {
   padding: 10px;
   border-radius: 10px;
-  background-color: rgb(161, 228, 237);
+  background-color: rgb(244, 226, 176);
   color: rgb(209, 157, 2);
   border: none;
   font-size: 25px;
@@ -88,7 +94,8 @@ h2 {
   border: solid;
   border-color: rgb(209, 157, 2);
   border-radius: 50%;
-  box-shadow: 0px 0px 20px 16px rgba(4, 119, 199, 0.2);
+  box-shadow: 2px -6px 95px rgba(19, 18, 18, 0.2);
+  -webkit-text-stroke: 2px black;
 }
 .city-2 {
   background-image: url("portland2.jpg");
@@ -104,8 +111,9 @@ h2 {
   border: solid;
   border-color: rgb(209, 157, 2);
   border-radius: 50%;
-  box-shadow: 0px 0px 20px 16px rgba(4, 119, 199, 0.2);
+  box-shadow: 2px -6px 95px rgba(19, 18, 18, 0.2);
   color: rgb(244, 226, 176);
+  -webkit-text-stroke: 2px black;
 }
 
 .city-3 {
@@ -119,12 +127,17 @@ h2 {
   border: solid;
   border-color: rgb(209, 157, 2);
   border-radius: 50%;
-  box-shadow: 0px 0px 20px 16px rgba(4, 119, 199, 0.2);
+  box-shadow: 2px -6px 95px rgba(19, 18, 18, 0.2);
   color: rgb(244, 226, 176);
+  -webkit-text-stroke: 2px black;
 }
 .time {
   margin-bottom: 20px;
   font-size: 50px;
+  font-weight: bold;
+}
+.date {
+  font-size: 30px;
   font-weight: bold;
 }
 footer > a {
@@ -132,6 +145,8 @@ footer > a {
 }
 
 footer {
-  margin: 30px 10px 10px 20px;
+  margin: 50px 10px 10px 20px;
   color: rgb(209, 157, 2);
+  text-shadow: 5px 5px 10px rgba(209, 157, 2, 0.4);
+  color: #d19d02;
 }
