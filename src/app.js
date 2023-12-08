@@ -2,10 +2,12 @@
 
 function updateRigaTime() {
   let rigaElement = document.querySelector("#riga");
-  let rigaDateElement = rigaElement.querySelector(".date");
-  let rigaTimeElement = rigaElement.querySelector(".time");
-  rigaDateElement.innerHTML = moment().format("MMM Do YYYY");
-  rigaTimeElement.innerHTML = moment().tz("Europe/Riga").format("HH:mm:ss");
+  if (rigaElement) {
+    let rigaDateElement = rigaElement.querySelector(".date");
+    let rigaTimeElement = rigaElement.querySelector(".time");
+    rigaDateElement.innerHTML = moment().format("MMM Do YYYY");
+    rigaTimeElement.innerHTML = moment().tz("Europe/Riga").format("HH:mm:ss");
+  }
 }
 
 updateRigaTime();
@@ -14,21 +16,51 @@ setInterval(updateRigaTime, 1000);
 //Time in Portland
 function updatePortlandTime() {
   let portlandElement = document.querySelector("#portland");
-  let portlandDateElement = portlandElement.querySelector(".date");
-  let portlandTimeElement = portlandElement.querySelector(".time");
-  portlandDateElement.innerHTML = moment().format("MMM Do YYYY");
-  portlandTimeElement.innerHTML = moment().tz("US/Pacific").format("HH:mm:ss");
+  if (portlandElement) {
+    let portlandDateElement = portlandElement.querySelector(".date");
+    let portlandTimeElement = portlandElement.querySelector(".time");
+    portlandDateElement.innerHTML = moment().format("MMM Do YYYY");
+    portlandTimeElement.innerHTML = moment()
+      .tz("US/Pacific")
+      .format("HH:mm:ss");
+  }
 }
+
 updatePortlandTime();
 setInterval(updatePortlandTime, 1000);
 
 //Time in Tokyo
 function updateTokyoTime() {
   let tokyoElement = document.querySelector("#tokyo");
-  let tokyoDateElement = tokyoElement.querySelector(".date");
-  let tokyoTimeElement = tokyoElement.querySelector(".time");
-  tokyoDateElement.innerHTML = moment().format("MMM Do YYYY");
-  tokyoTimeElement.innerHTML = moment().tz("Asia/Tokyo").format("HH:mm:ss");
+  if (tokyoElement) {
+    let tokyoDateElement = tokyoElement.querySelector(".date");
+    let tokyoTimeElement = tokyoElement.querySelector(".time");
+    tokyoDateElement.innerHTML = moment().format("MMM Do YYYY");
+    tokyoTimeElement.innerHTML = moment().tz("Asia/Tokyo").format("HH:mm:ss");
+  }
 }
 updateTokyoTime();
 setInterval(updateTokyoTime, 1000);
+
+//City selection menu, display time when city is selected
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityName = cityTimeZone.split("/")[1];
+  let cityTime = moment().tz(cityTimeZone).format("HH:mm:ss");
+  let cityDate = moment().tz(cityTimeZone).format("MMM Do YYYY");
+
+  let cityDisplayElement = document.querySelector("#city-container");
+
+  cityDisplayElement.innerHTML = ` <div class="cities">
+              <div class="city-4">
+                <h2 class="city-name">${cityName}</h2>
+                <div class="time">${cityTime}</div>
+                <div class="date">${cityDate}</div>
+              </div> <br />
+              <a href="/">Go back to all cities</a>`;
+
+  setInterval(updateCity, 1000);
+}
+
+let citySelectElement = document.querySelector("#city-select");
+citySelectElement.addEventListener("change", updateCity);
